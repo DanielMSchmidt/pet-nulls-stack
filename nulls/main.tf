@@ -24,10 +24,6 @@ resource "null_resource" "this" {
   triggers = {
     pet = var.pet
   }
-
-  provisioner "local-exec" {
-    command = "sleep ${count.index} && echo '${var.pet}'"
-  }
 }
 
 output "ids" {
