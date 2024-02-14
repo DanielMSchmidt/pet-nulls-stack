@@ -14,3 +14,10 @@ deployment "complex" {
     instances        = 3
   }
 }
+
+deployment "insane" {
+  variables = {
+    prefix           = "insane"
+    instances        = 30
+  }
+}
