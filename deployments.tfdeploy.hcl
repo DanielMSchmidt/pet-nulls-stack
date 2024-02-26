@@ -4,7 +4,7 @@
 deployment "simple" {
   variables = {
     prefix           = "simple234"
-    instances        = "fünf"
+    instances        = 1
   }
 }
 
@@ -18,6 +18,6 @@ deployment "complex" {
 deployment "insane" {
   variables = {
     prefix           = "insane"
-    instances        = 30
+    instances        = "fünf"
   }
 }
