@@ -18,6 +18,6 @@ deployment "complex" {
 deployment "insane" {
   variables = {
     prefix           = "insane"
-    instances        = 3000
+    instances        = 30
   }
 }
