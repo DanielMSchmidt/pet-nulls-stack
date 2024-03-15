@@ -24,6 +24,10 @@ resource "null_resource" "this" {
   triggers = {
     pet = var.pet
   }
+
+  lifecycle {
+    replace_triggered_by = [ "var.instances" ]
+  }
 }
 
 output "ids" {
