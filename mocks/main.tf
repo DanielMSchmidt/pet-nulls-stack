@@ -11,5 +11,4 @@ terraform {
 
 resource "tfcoremock_simple_resource" "simple_resource" {
   id = "my-simple-resource"
-  my_value = 42
 }
