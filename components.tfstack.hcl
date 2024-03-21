@@ -23,6 +23,7 @@ required_providers {
 
 provider "random" "this" {}
 provider "null" "this" {}
+provider "tfcoremock" "this" {}
 
 component "pet" {
   source = "./pet"
@@ -47,4 +48,12 @@ component "nulls" {
   providers = {
     null = provider.null.this
   }
+}
+
+
+component "mocks" {
+    source = "./mocks"
+    providers = {
+        tfcoremock = provider.tfcoremock.this
+    }
 }
