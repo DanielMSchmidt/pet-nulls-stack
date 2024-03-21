@@ -9,7 +9,7 @@ terraform {
   }
 }
 
-resource "tfcoremock_dynamic_resource" "my_dynamic_resource" {
-  id = "my-dynamic-resource"
+resource "tfcoremock_simple_resource" "simple_resource" {
+  id = "my-simple-resource"
   my_value = 42
 }
