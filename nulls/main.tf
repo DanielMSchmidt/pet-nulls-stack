@@ -25,12 +25,11 @@ resource "null_resource" "this" {
     pet = var.pet
   }
 
-  lifecycle {
-    replace_triggered_by = [ 
-      # replace all but the last instance
-      var.instances > 1 ? null_resource.this[count.index - 1] : null
-     ]
-  }
+  # lifecycle {
+  #   replace_triggered_by = [
+  #     null_resource.base
+  #    ]
+  # }
 }
 
 output "ids" {
