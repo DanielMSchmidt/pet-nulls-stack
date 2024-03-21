@@ -19,6 +19,11 @@ required_providers {
     source  = "hashicorp/null"
     version = "~> 3.1.1"
   }
+
+  tfcoremock = {
+    source  = "hashicorp/tfcoremock"
+    version = "0.2.0"
+  }
 }
 
 provider "random" "this" {}
