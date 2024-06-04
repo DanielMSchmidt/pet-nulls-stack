@@ -55,10 +55,35 @@ component "nulls" {
   }
 }
 
-
 component "mocks" {
     source = "./mocks"
     providers = {
         tfcoremock = provider.tfcoremock.this
     }
+}
+
+## A way to get deferred changes
+component "diceroll" {
+  source = "./set-of-pets"
+
+  inputs = {
+    max = 6
+  }
+
+  providers = {
+    random = provider.random.this
+  }
+}
+
+component "petperdice" {
+  for_each = component.diceroll.value
+  source = "./pet"
+
+  inputs = {
+    prefix = each.value
+  }
+
+  providers = {
+    random = provider.random.this
+  }
 }
