@@ -10,9 +10,6 @@ terraform {
   }
 }
 
-variable "prefix" {
-  type = string
-}
 
 variable "max" {
   type    = number
@@ -24,13 +21,7 @@ resource "random_integer" "this" {
   max = var.max
 }
 
-resource "random_pet" "this" {
-  count = random_integer.this.result
-
-  prefix = var.prefix
-  length = 5
-}
 
 output "value" {
-  value = toset(random_pet.this.*)
+  value = random_integer.this.result
 }
