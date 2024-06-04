@@ -68,6 +68,7 @@ component "diceroll" {
 
   inputs = {
     max = 6
+    prefix = "pet"
   }
 
   providers = {
@@ -76,7 +77,7 @@ component "diceroll" {
 }
 
 component "petperdice" {
-  for_each = component.diceroll.value
+  for_each = toset(component.diceroll.value)
   source = "./pet"
 
   inputs = {
