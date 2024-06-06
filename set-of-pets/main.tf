@@ -14,6 +14,11 @@ terraform {
 variable "max" {
   type    = number
   default = 10
+
+  validation {
+    condition     = var.max > 0
+    error_message = "The value must be greater than 0."
+  }
 }
 
 resource "random_integer" "this" {
