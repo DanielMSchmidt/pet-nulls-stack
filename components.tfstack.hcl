@@ -9,6 +9,11 @@ variable "instances" {
   type = number
 }
 
+variable "one_missing" {
+  type = number
+}
+
+
 required_providers {
   random = {
     source  = "hashicorp/random"
