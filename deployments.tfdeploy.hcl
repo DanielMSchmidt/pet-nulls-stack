@@ -19,8 +19,5 @@ deployment "insane" {
   variables = {
     prefix           = "insane"
     instances        = 5
-    # instances        = "fünf"
-    #
-    one_too_much     = "true"
   }
 }
