@@ -86,3 +86,18 @@ component "petperdice" {
     random = provider.random.this
   }
 }
+
+
+component "data-source" {
+  source = "./data-source"
+
+  inputs = {
+    input_value = {
+        value = "value"
+    }
+  }
+
+  providers = {
+    null = provider.null.this
+  }
+}
