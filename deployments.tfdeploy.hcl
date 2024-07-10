@@ -21,3 +21,10 @@ deployment "insane" {
     instances        = 5
   }
 }
+
+deployment "sane" {
+  variables = {
+    prefix           = "sane"
+    instances        = 2
+  }
+}
