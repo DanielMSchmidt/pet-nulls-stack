@@ -28,3 +28,38 @@ deployment "sane" {
     instances        = 2
   }
 }
+
+deployment "normal1" {
+  variables = {
+    prefix           = "normal1"
+    instances        = 1
+  }
+}
+
+deployment "normal2" {
+  variables = {
+    prefix           = "normal2"
+    instances        = 1
+  }
+}
+
+deployment "normal3" {
+  variables = {
+    prefix           = "normal3"
+    instances        = 1
+  }
+}
+
+deployment "normal4" {
+  variables = {
+    prefix           = "normal4"
+    instances        = 1
+  }
+}
+
+deployment "normal5" {
+  variables = {
+    prefix           = "normal5"
+    instances        = 1
+  }
+}
