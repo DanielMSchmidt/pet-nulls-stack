@@ -113,3 +113,16 @@ component "nails" {
     null = provider.null.this
   }
 }
+
+# For taking some time
+component "final_countdown" {
+  source = "./countdown"
+
+  inputs = {
+    until = 100
+  }
+
+  providers = {
+    null = provider.null.this
+  }
+}
