@@ -113,3 +113,16 @@ component "nails" {
     null = provider.null.this
   }
 }
+
+removed {
+    from = component.nails
+    
+    providers = {
+      null = provider.null.this
+    }
+
+    lifecycle {
+      destroy = true
+    }
+}
+
