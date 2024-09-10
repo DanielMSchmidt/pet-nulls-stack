@@ -101,18 +101,18 @@ component "nils" {
   }
 }
 
-component "nails" {
-  source = "./nulls"
+# component "nails" {
+#   source = "./nulls"
 
-  inputs = {
-    pet       = component.pet.name
-    instances = var.instances
-  }
+#   inputs = {
+#     pet       = component.pet.name
+#     instances = var.instances
+#   }
 
-  providers = {
-    null = provider.null.this
-  }
-}
+#   providers = {
+#     null = provider.null.this
+#   }
+# }
 
 removed {
     from = component.nails
