@@ -116,6 +116,7 @@ component "nails" {
 
 removed {
     from = component.nails
+    source = "./nulls"
     
     providers = {
       null = provider.null.this
