@@ -114,16 +114,16 @@ component "nils" {
 #   }
 # }
 
-removed {
-    from = component.nails
-    source = "./nulls"
+# removed {
+#     from = component.nails
+#     source = "./nulls"
     
-    providers = {
-      null = provider.null.this
-    }
+#     providers = {
+#       null = provider.null.this
+#     }
 
-    lifecycle {
-      destroy = true
-    }
-}
+#     lifecycle {
+#       destroy = true
+#     }
+# }
 
