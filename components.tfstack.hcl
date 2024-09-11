@@ -101,22 +101,22 @@ component "nils" {
   }
 }
 
-# component "nails" {
-#   source = "./nulls"
+component "lots_of_resources" {
+  source = "./lots-of-resources"
 
-#   inputs = {
-#     pet       = component.pet.name
-#     instances = var.instances
-#   }
+  inputs = {
+    pet       = component.pet.name
+    resources = 10
+  }
 
-#   providers = {
-#     null = provider.null.this
-#   }
-# }
+  providers = {
+    null = provider.null.this
+  }
+}
 
 # removed {
-#     from = component.nails
-#     source = "./nulls"
+#     from = component.lots_of_resources
+#     source = "./lots-of-resources"
     
 #     providers = {
 #       null = provider.null.this
