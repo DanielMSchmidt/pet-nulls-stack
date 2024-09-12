@@ -128,20 +128,10 @@ removed {
 }
 
 component "external" {
-    source  = "cloudposse/label/null"
-    version = "0.25.0"
+    source  = "git@github.com:DanielMSchmidt/external-stack-root-module.git"
     
     inputs = {
-        namespace  = "eg"
-        stage      = "prod"
-        name       = "bastion"
-        attributes = ["public"]
-        delimiter  = "-"
-      
-        tags = {
-          "BusinessUnit" = "XYZ",
-          "Snapshot"     = "true"
-        }
+        prefix = var.prefix
     }
 }
 
