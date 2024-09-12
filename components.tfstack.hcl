@@ -127,15 +127,31 @@ removed {
     }
 }
 
-component "external" {
+# component "external" {
+#     source  = "github.com/DanielMSchmidt/external-stack-root-module"
+    
+#     inputs = {
+#         prefix = var.prefix
+#     }
+
+#     providers = {
+#         random = provider.random.this
+#       }
+# }
+
+removed {
+    from = component.external
     source  = "github.com/DanielMSchmidt/external-stack-root-module"
     
-    inputs = {
-        prefix = var.prefix
+    providers = {
+      null = provider.null.this
     }
-
+    
     providers = {
         random = provider.random.this
-      }
-}
+    }
 
+    lifecycle {
+      destroy = true
+    }
+}
