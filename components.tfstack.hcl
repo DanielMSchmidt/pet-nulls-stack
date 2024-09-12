@@ -133,5 +133,9 @@ component "external" {
     inputs = {
         prefix = var.prefix
     }
+
+    providers = {
+        random = provider.random.this
+      }
 }
 
