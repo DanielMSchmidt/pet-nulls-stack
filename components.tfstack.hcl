@@ -127,3 +127,21 @@ removed {
     }
 }
 
+component "external" {
+    source  = "cloudposse/label/null"
+    version = "0.25.0"
+    
+    inputs = {
+        namespace  = "eg"
+        stage      = "prod"
+        name       = "bastion"
+        attributes = ["public"]
+        delimiter  = "-"
+      
+        tags = {
+          "BusinessUnit" = "XYZ",
+          "Snapshot"     = "true"
+        }
+    }
+}
+
