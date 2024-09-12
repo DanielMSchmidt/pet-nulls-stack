@@ -128,7 +128,7 @@ removed {
 }
 
 component "external" {
-    source  = "git@github.com:DanielMSchmidt/external-stack-root-module.git"
+    source  = "github.com:DanielMSchmidt/external-stack-root-module"
     
     inputs = {
         prefix = var.prefix
