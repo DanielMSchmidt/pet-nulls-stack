@@ -55,6 +55,7 @@ component "nulls" {
   }
 }
 
+# This always has a change
 component "mocks" {
     source = "./mocks"
     providers = {
@@ -101,31 +102,31 @@ component "nils" {
   }
 }
 
-component "lots_of_resources" {
-  source = "./lots-of-resources"
+# component "lots_of_resources" {
+#   source = "./lots-of-resources"
 
-  inputs = {
-      pet       = "peter"
-    resources = 10
-  }
+#   inputs = {
+#       pet       = "peter"
+#     resources = 10
+#   }
 
-  providers = {
-    null = provider.null.this
-  }
-}
-
-# removed {
-#     from = component.lots_of_resources
-#     source = "./lots-of-resources"
-    
-#     providers = {
-#       null = provider.null.this
-#     }
-
-#     lifecycle {
-#       destroy = false
-#     }
+#   providers = {
+#     null = provider.null.this
+#   }
 # }
+
+removed {
+    from = component.lots_of_resources
+    source = "./lots-of-resources"
+    
+    providers = {
+      null = provider.null.this
+    }
+
+    lifecycle {
+      destroy = true
+    }
+}
 
 component "external" {
     source  = "github.com/DanielMSchmidt/external-stack-root-module"
