@@ -101,30 +101,30 @@ component "nils" {
   }
 }
 
-component "lots_of_resources" {
-  source = "./lots-of-resources"
+# component "lots_of_resources" {
+#   source = "./lots-of-resources"
 
-  inputs = {
-    pet       = component.pet.name
-    resources = 10
-  }
+#   inputs = {
+#     pet       = component.pet.name
+#     resources = 10
+#   }
 
-  providers = {
-    null = provider.null.this
-  }
-}
+#   providers = {
+#     null = provider.null.this
+#   }
+# }
 
-# removed {
-#     from = component.lots_of_resources
-#     source = "./lots-of-resources"
+removed {
+    from = component.lots_of_resources
+    source = "./lots-of-resources"
     
-#     providers = {
-#       null = provider.null.this
-#     }
+    providers = {
+      null = provider.null.this
+    }
 
-#     lifecycle {
-#       destroy = false
-#     }
+    lifecycle {
+      destroy = false
+    }
 # }
 
 component "external" {
