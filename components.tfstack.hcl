@@ -56,7 +56,15 @@ component "nulls" {
 }
 
 # This always has a change
-component "mocks" {
+# component "mocks" {
+#     source = "./mocks"
+#     providers = {
+#         tfcoremock = provider.tfcoremock.this
+#     }
+# }
+
+removed {
+    from = component.mocks
     source = "./mocks"
     providers = {
         tfcoremock = provider.tfcoremock.this
@@ -115,18 +123,18 @@ component "nils" {
 #   }
 # }
 
-removed {
-    from = component.lots_of_resources
-    source = "./lots-of-resources"
+# removed {
+#     from = component.lots_of_resources
+#     source = "./lots-of-resources"
     
-    providers = {
-      null = provider.null.this
-    }
+#     providers = {
+#       null = provider.null.this
+#     }
 
-    lifecycle {
-      destroy = true
-    }
-}
+#     lifecycle {
+#       destroy = true
+#     }
+# }
 
 component "external" {
     source  = "github.com/DanielMSchmidt/external-stack-root-module"
