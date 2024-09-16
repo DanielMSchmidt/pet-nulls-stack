@@ -123,7 +123,7 @@ removed {
     }
 
     lifecycle {
-      destroy = false
+      destroy = true
     }
 }
 
