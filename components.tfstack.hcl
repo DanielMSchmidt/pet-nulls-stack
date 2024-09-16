@@ -125,7 +125,7 @@ removed {
     lifecycle {
       destroy = false
     }
-# }
+}
 
 component "external" {
     source  = "github.com/DanielMSchmidt/external-stack-root-module"
