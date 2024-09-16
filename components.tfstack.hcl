@@ -101,57 +101,57 @@ component "nils" {
   }
 }
 
-# component "lots_of_resources" {
-#   source = "./lots-of-resources"
+component "lots_of_resources" {
+  source = "./lots-of-resources"
 
-#   inputs = {
-#     pet       = component.pet.name
-#     resources = 10
-#   }
+  inputs = {
+    pet       = component.pet.name
+    resources = 10
+  }
 
-#   providers = {
-#     null = provider.null.this
-#   }
-# }
-
-removed {
-    from = component.lots_of_resources
-    source = "./lots-of-resources"
-    
-    providers = {
-      null = provider.null.this
-    }
-
-    lifecycle {
-      destroy = false
-    }
+  providers = {
+    null = provider.null.this
+  }
 }
 
-# component "external" {
-#     source  = "github.com/DanielMSchmidt/external-stack-root-module"
+# removed {
+#     from = component.lots_of_resources
+#     source = "./lots-of-resources"
     
-#     inputs = {
-#         prefix = var.prefix
+#     providers = {
+#       null = provider.null.this
 #     }
 
-#     providers = {
-#         random = provider.random.this
-#       }
+#     lifecycle {
+#       destroy = false
+#     }
 # }
 
-removed {
-    from = component.external
+component "external" {
     source  = "github.com/DanielMSchmidt/external-stack-root-module"
     
-    providers = {
-      null = provider.null.this
-    }
-    
-    providers = {
-        random = provider.random.this
+    inputs = {
+        prefix = var.prefix
     }
 
-    lifecycle {
-      destroy = true
-    }
+    providers = {
+        random = provider.random.this
+      }
 }
+
+# removed {
+#     from = component.external
+#     source  = "github.com/DanielMSchmidt/external-stack-root-module"
+    
+#     providers = {
+#       null = provider.null.this
+#     }
+    
+#     providers = {
+#         random = provider.random.this
+#     }
+
+#     lifecycle {
+#       destroy = true
+#     }
+# }
