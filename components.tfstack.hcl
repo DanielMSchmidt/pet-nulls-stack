@@ -123,40 +123,15 @@ component "lots_of_resources" {
   }
 }
 
-removed {
-    from = component.lots_of_resources
-    source = "./lots-of-resources"
-    
-    providers = {
-      null = provider.null.this
-    }
-
-    lifecycle {
-      destroy = false
-    }
-}
-
-# component "external" {
-#     source  = "github.com/DanielMSchmidt/external-stack-root-module"
-    
-#     inputs = {
-#         prefix = var.prefix
-#     }
-
-#     providers = {
-#         random = provider.random.this
-#       }
-# }
-
 # removed {
-#     from = component.external
-#     source  = "github.com/DanielMSchmidt/external-stack-root-module"
+#     from = component.lots_of_resources
+#     source = "./lots-of-resources"
     
 #     providers = {
-#       random = provider.random.this
+#       null = provider.null.this
 #     }
 
 #     lifecycle {
-#       destroy = true
+#       destroy = false
 #     }
 # }
