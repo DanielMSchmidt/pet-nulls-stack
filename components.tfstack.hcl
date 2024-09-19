@@ -123,15 +123,3 @@ component "lots_of_resources" {
   }
 }
 
-# removed {
-#     from = component.lots_of_resources
-#     source = "./lots-of-resources"
-    
-#     providers = {
-#       null = provider.null.this
-#     }
-
-#     lifecycle {
-#       destroy = false
-#     }
-# }
