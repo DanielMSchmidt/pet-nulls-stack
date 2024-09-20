@@ -5,7 +5,7 @@ trigger "push_to_main" {
     check = context.branch == "main" && context.is_pull_request == false
     is_speculative = false
 }
-#
+
 # trigger "prs" {
 #     check = context.is_pull_request == true && context.pr.base_branch == "main"
 #     is_speculative = true
