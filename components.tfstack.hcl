@@ -3,7 +3,7 @@
 
 trigger "push_to_main" {
     check = context.branch == "main" && context.is_pull_request == false
-    is_specultaive = false
+    is_speculative = false
 }
 
 variable "prefix" {
