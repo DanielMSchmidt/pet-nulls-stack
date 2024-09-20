@@ -6,6 +6,11 @@ trigger "push_to_main" {
     is_speculative = false
 }
 
+# trigger "prs" {
+#     check = context.is_pull_request == true && context.pr.base_branch == "main"
+#     is_speculative = true
+# }
+
 variable "prefix" {
   type = string
 }
