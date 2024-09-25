@@ -21,10 +21,10 @@ required_providers {
     version = "~> 3.1.1"
   }
 
-  tfcoremock = {
-    source  = "hashicorp/tfcoremock"
-    version = "0.2.0"
-  }
+  # tfcoremock = {
+  #   source  = "hashicorp/tfcoremock"
+  #   version = "0.2.0"
+  # }
 }
 
 provider "random" "this" {}
