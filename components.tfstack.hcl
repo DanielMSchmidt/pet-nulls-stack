@@ -29,7 +29,7 @@ required_providers {
 
 provider "random" "this" {}
 provider "null" "this" {}
-provider "tfcoremock" "this" {}
+# provider "tfcoremock" "this" {}
 
 component "pet" {
   source = "./pet"
@@ -54,97 +54,4 @@ component "nulls" {
   providers = {
     null = provider.null.this
   }
-}
-
-# This always has a change
-# component "mocks" {
-#     source = "./mocks"
-#     providers = {
-#         tfcoremock = provider.tfcoremock.this
-#     }
-# }
-
-# removed {
-#     from = component.mocks
-#     source = "./mocks"
-#     providers = {
-#         tfcoremock = provider.tfcoremock.this
-#     }
-# }
-
-## A way to get deferred changes
-# component "diceroll" {
-#   source = "./set-of-pets"
-
-#   inputs = {
-#     max = 6
-#   }
-
-#   providers = {
-#     random = provider.random.this
-#   }
-# }
-
-removed {
-    from = component.diceroll
-    source = "./set-of-pets"
-    
-    providers = {
-        random = provider.random.this
-        }
-    }
-
-# component "petperdice" {
-#   source = "./pet"
-
-#   inputs = {
-#     prefix = component.diceroll.value
-#   }
-
-#   providers = {
-#     random = provider.random.this
-#   }
-# }
-
-removed {
-    from = component.petperdice
-    source = "./pet"
-    providers = {
-        random = provider.random.this
-        }
-    }
-
-# For deferrals
-# component "nils" {
-#   source = "./nulls"
-
-#   inputs = {
-#     pet = component.pet.latename
-#     instances = component.pet.number
-#   }
-
-#   providers = {
-#     null = provider.null.this
-#   }
-# }
-
-removed {
-    from = component.nils
-    source = "./nulls"
-    providers = {
-        null = provider.null.this
-    }
-}
-
-removed {
-    from = component.lots_of_resources
-    source = "./lots-of-resources"
-    
-    providers = {
-        null = provider.null.this
-    }
-    
-        lifecycle {
-          destroy = true
-        }
 }
