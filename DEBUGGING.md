@@ -8,7 +8,7 @@
     - Complete overview of apply over all components
 - Stack Events: /api/v2/stack-plans/<stack_plan_id>/stack-events
     - High-level events that trigger new plan / apply runs
-- Stack Plan:  /api/v2/stack-plans/<stack_plan_id>?include=stack-plan-operations%2Cstack-diagnostics
+- Stack Plan:  /api/v2/stack-plans/<stack_plan_id>?include=stack-plan-operations
     - stack-plan-operation type: included[type=stack-plan-operation].attributes.operation-type => "apply" || "plan"
     - plan / apply event stream: included[type=stack-plan-operation].attributes.event-stream-url
         - Detailed event stream of the plan / apply run with provider logs 
