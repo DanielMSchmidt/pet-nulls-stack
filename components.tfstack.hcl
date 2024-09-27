@@ -47,6 +47,18 @@ component "pet" {
   }
 }
 
+component "pet2" {
+  source = "./pet"
+
+  inputs = {
+    prefix = var.prefix
+  }
+
+  providers = {
+    random = provider.random.this
+  }
+}
+
 component "nulls" {
   source = "./nulls"
 
