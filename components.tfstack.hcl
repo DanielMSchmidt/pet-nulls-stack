@@ -1,10 +1,6 @@
 # Copyright (c) HashiCorp, Inc.
 # SPDX-License-Identifier: MPL-2.0
 
-trigger "push_to_main" {
-    check = context.branch == "main" && context.is_pull_request == false
-    is_speculative = false
-}
 
 variable "prefix" {
   type = string
