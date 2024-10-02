@@ -70,4 +70,5 @@ component "nulls" {
 
 output "hey" {
     value = component.nulls.ids
+    type = set(string)
 }
