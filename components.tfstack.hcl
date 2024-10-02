@@ -67,3 +67,7 @@ component "nulls" {
     null = provider.null.this
   }
 }
+
+output "hey" {
+    value = component.nulls.ids
+}
