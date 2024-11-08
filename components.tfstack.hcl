@@ -58,6 +58,15 @@ component "pet2" {
   }
 }
 
+component "ephemeral" {
+  source = "./ephemeral"
+
+  inputs = {
+    ephem = "not really an ephemeral value, but let's pretend it is"
+  }
+}
+
+
 component "nulls" {
   source = "./nulls"
 
