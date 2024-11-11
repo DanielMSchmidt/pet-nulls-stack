@@ -64,6 +64,10 @@ component "ephemeral" {
   inputs = {
     ephem = "not really an ephemeral value, but let's pretend it is"
   }
+
+  providers = {
+    random = provider.random.this
+  }
 }
 
 
